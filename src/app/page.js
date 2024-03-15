@@ -1,113 +1,97 @@
-import Image from "next/image";
+'use client'
+import animation from "@/lottie/animation.json";
+import Lottie from "lottie-react";
 
-export default function Home() {
+export default function Homepage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <section className="relative  bg-blueGray-50">
+
+      <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
+        <div className="absolute top-0 w-full h-full bg-center bg-cover">
+          <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
+        </div>
+        <div className="container relative mx-auto">
+          <div className="items-center flex flex-wrap">
+            <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+              <div className="pr-12">
+                <h1 className="text-white font-semibold text-5xl">
+                  Almuin Syarif Hidayatullah
+                </h1>
+                <p className="mt-4 text-lg text-blueGray-200">
+                  Jl. Semampir no 61, Sedati, Sidoarjo 61253
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="max-w-screen-sm mx-auto">
+            <Lottie animationData={animation} loop={true} />
+          </div>
+        </div>
+        <div className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style={{ transform: "translateZ(0px)" }}>
+          <svg className="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+            <polygon className="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
+          </svg>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+      <section className="pb-10 bg-blueGray-200 -mt-24">
+        {/* <div className="container mx-auto px-4">
+          <div className="flex flex-wrap">
+            <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+              <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div className="px-4 py-5 flex-auto">
+                  <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                    <i className="fas fa-award"></i>
+                  </div>
+                  <h6 className="text-xl font-semibold">Awarded Agency</h6>
+                  <p className="mt-2 mb-4 text-blueGray-500">
+                    Divide details about your product or agency work into parts.
+                    A paragraph describing a feature will be enough.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="w-full md:w-4/12 px-4 text-center">
+              <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div className="px-4 py-5 flex-auto">
+                  <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400">
+                    <i className="fas fa-retweet"></i>
+                  </div>
+                  <h6 className="text-xl font-semibold">Free Revisions</h6>
+                  <p className="mt-2 mb-4 text-blueGray-500">
+                    Keep you user engaged by providing meaningful information.
+                    Remember that by this time, the user is curious.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="pt-6 w-full md:w-4/12 px-4 text-center">
+              <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div className="px-4 py-5 flex-auto">
+                  <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
+                    <i className="fas fa-fingerprint"></i>
+                  </div>
+                  <h6 className="text-xl font-semibold">Verified Company</h6>
+                  <p className="mt-2 mb-4 text-blueGray-500">
+                    Write a few lines about each one. A paragraph describing a
+                    feature will be enough. Keep you user engaged!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> */}
+        <footer className="relative  pt-8 pb-6 mt-1">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-wrap items-center md:justify-between justify-center">
+              <div className="w-full md:w-6/12 px-4 mx-auto text-center">
+                <div className="text-sm text-blueGray-500 font-semibold py-1">
+                  Made with ❤️ by <a href="https://aprita.web.id" className="text-blueGray-500 hover:text-blueGray-800" target="_blank"> RA</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </section>
+  )
 }
