@@ -2,12 +2,16 @@
 import animation from "@/lottie/animation.json";
 import Lottie from "lottie-react";
 import Image from "next/image";
+import Head from "next/head";
 
 export default function Homepage() {
   const phoneNumber = 83830777057;
   const countryCode = 62;
   return (
     <section className="relative bg-white">
+      <Head>
+        <title>Al Mu'in</title>
+      </Head>
       <div className="relative pt-16 pb-32 flex content-center items-center justify-center">
         <div className="absolute top-0 w-full h-full bg-center bg-cover">
           <span
